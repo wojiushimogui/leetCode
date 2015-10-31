@@ -7,13 +7,8 @@ Example2: x = -123, return -321
 
 #include<stdio.h>
 #include<stdlib.h>
-#include<math.h>
 int reverse(int x) {
-//	int intLen=sizeof(int)*8;
-//	if(x>pow(2,intLen-1)-1||x<-pow(2,intLen-1)){
-//		return 0;
-//	}
-	 
+
     long result=0;
     int symbol=1;
     if(x<0){
