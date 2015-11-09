@@ -78,3 +78,17 @@ int main(void){
 		}
 	}
 }
+
+
+public class Solution {
+    List<String> list = new ArrayList<String>();
+    public List<String> generateParenthesis(int n) {
+        loop("(",n-1,1);
+        return list;
+    }
+    private void loop(String s, int n, int o){
+        if (n==0 && o==0) list.add(s);
+        if (n>0) loop(s+"(", n-1, o+1);
+        if (o>0) loop(s+")", n, o-1);
+    }
+}
