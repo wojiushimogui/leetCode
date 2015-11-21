@@ -10,7 +10,7 @@ int* spiralOrder(int** matrix, int matrixRowSize, int matrixColSize) {
         return NULL;
     }
     //nx数组和ny数组用来控制顺时针打印时，下标的变化
-    //例如：向右打印时，matrix[y][x]中x每次添加1个单位，y不变；因此nx数组中第一个元素为1，ny数组中第一个元素为0；
+    //例如：向右访问时，matrix[y][x]中x每次添加1个单位，y不变；因此nx数组中第一个元素为1，ny数组中第一个元素为0；
     int nx[4]={1,0,-1,0};
     int ny[4]={0,1,0,-1};
     int i=0;//用来控制方向，i=0是表示向右，i=1时表示向下，i=2时表示向左，i=3时表示向上
