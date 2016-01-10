@@ -1,10 +1,12 @@
 #include<stdio.h>
 #include<stdlib.h>
+//统计1~n中组成的唯一二叉搜索树的个数 
+//二叉搜索树的特性为：如果左子树不为空，则左子树节点的值全部小于根节点，如果右子树不为空，则右子树全部大于根节点的值
 //参考地址：https://leetcode.com/discuss/75282/easy-to-understand-top-down-dp-solution 
 /*
 For a valid BST, there must be a node that is the root. The root can be any number between 1 and n. What if the root is k where k is in between 1 and n? It becomes obvious that 1 to k-1 should be k's left children and k+1 to n should be k's right children. Thus, a recursive formula is formulated as follows:
 
-number of BSTs with k being the root 
+result of BSTs with k being the root 
 = count of BSTs of k-1 consecutive numbers * count of BSTs of n-k consecutive numbers
 And since we have a total of n choices for k, total number of BSTs is thus a sum of all n choices for k.
 */ 
