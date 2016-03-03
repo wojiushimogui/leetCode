@@ -6,14 +6,6 @@
       int val;
       struct ListNode *next;
   };
- 
-/**
- * Definition for singly-linked list.
- * struct ListNode {
- *     int val;
- *     struct ListNode *next;
- * };
- */
  //在leetcode中报超时错误，不能AC 
 void reorderList(struct ListNode* head) {
     if(head==NULL||head->next==NULL){
