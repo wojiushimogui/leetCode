@@ -1,9 +1,6 @@
 
 
- struct ListNode {
-      int val;
-      struct ListNode *next;
-  };
+
 //合并两个链表 
 void combineList(struct ListNode* head,struct ListNode* newHead){
 	if(head==NULL){
