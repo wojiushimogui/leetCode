@@ -1,6 +1,6 @@
 #include<stdio.h>
 #include<stdlib.h>
-int pow(int a,int b){
+int mypow(int a,int b){
 	int res=1;
 	for(int i=0;i<b;i++){
 		res*=a;
@@ -34,7 +34,7 @@ int* countBits(int num, int* returnSize) {
 		count++;
 	} 	
 	for(int i=1;i<count;i++){
-		int powValue=pow(2,i);
+		int powValue=mypow(2,i);
 		for(int j=0;powValue+j<=num&&j<powValue;j++){//ע�⣺ powValue+j<=num
 			res[powValue+j]=res[j]+1;
 		}		
