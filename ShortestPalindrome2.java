@@ -1,6 +1,6 @@
 package com.wrh.leetcode;
 
-public class ShortestPalindrome {
+public class ShortestPalindrome2 {
 	
     public String shortestPalindrome(String s) {
         if(s==null||s.length()<1||isPalindrome(s)){
@@ -8,14 +8,17 @@ public class ShortestPalindrome {
         }
         //如果s不是回文字符，则在字符串前面添加字符使其为回文字符串
         int len = s.length();
-        String ss = s;
-        for(int i=len-1;i>=0;i--){
-            s = s.substring(0, len-1-i)+ss.charAt(i)+s.substring(len-1-i);
-        	if(isPalindrome(s)){
-        		return s;
+        String str =new String();
+        int i = len;
+        for(;i>=0;i--){
+        	str = s.substring(0, i);
+        	if(isPalindrome(str)){
+        		break;
         	}
         }
-        return s;
+        String ss = s.substring(i);
+        StringBuilder sb = new StringBuilder(ss);
+        return sb.reverse().append(str).append(ss).toString();
     }
     //判断一个字符串是否是palindrome
 	private boolean isPalindrome(String str) {
@@ -37,7 +40,7 @@ public class ShortestPalindrome {
 	
 	public static void main(String[] args){
 		String str = "adv";
-		String res = new ShortestPalindrome().shortestPalindrome(str);
+		String res = new ShortestPalindrome2().shortestPalindrome(str);
 		System.out.println(res);
 	}
 }
